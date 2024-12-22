@@ -34,7 +34,7 @@ function BodyPartExercises(){
                 >
                     <h1 className="fw-bolder font-contact text-center mt-5 mt-md-3 mb-3" style={{color:"#b775db"}}>DISCOVER CURATED EXERCISES</h1>
                     {
-                        data.map((item,index)=>{
+                        data?.map((item,index)=>{
                             return(
                             <div className="col-md-3 col-lg-2 border mx-3 my-3 rounded-5 px-3 pb-2 pb-lg-0 shimmer-box2 pointer" key={index} onClick={() => redirectDetails(item.id)}>
 
