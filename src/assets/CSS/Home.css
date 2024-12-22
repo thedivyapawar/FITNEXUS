@@ -1,0 +1,107 @@
+:root {
+    --bs-gutter-x: 0; /* Horizontal gutter */
+    --bs-gutter-y: 0; /* Vertical gutter */
+  }
+
+  .home-bg {
+    background-image: url('../Images//main-bg.jpg'); /* Path to your image */
+    background-size: cover; /* Makes the image cover the entire component */
+    background-position: 20% 30%;
+    background-repeat: no-repeat; /* Prevents tiling of the image */
+    width: 100%; /* Ensures the width of the component adjusts responsively */
+    height: 700px; /* Set a height for the component or use `min-height` */
+  }
+
+.font-big{
+    font-size: 70px;
+}
+
+.margin-div{
+    margin-top: 60px;
+    margin-left: 120px;
+}
+
+.hollow-text {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Shadow to simulate the outline */
+  }
+
+.get-started{
+  padding: 10px 30px;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  border: none;
+  margin: 13px 0px;
+  transition: 0.5s ease-in-out;
+}
+
+.get-started:hover{
+  transform: scale(0.90);
+}
+
+
+  
+  @media (max-width: 1000px) {
+    .home-bg{
+      background-size: cover; /* Adjust for smaller screens */
+      height: 500px; /* Adjust height as needed */
+    }
+
+    .margin-div{
+        margin-top: 50px;
+        margin-left: 80px;
+    }
+
+    .font-big{
+        font-size: 45px;
+    }
+
+
+    .get-started{
+      padding: 10px 30px;
+      border-radius: 30px;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+      border: none;
+      margin: 13px 0px;
+    }
+  }
+
+
+
+  @media (max-width: 500px) {
+    .home-bg{
+      background-size: cover; /* Adjust for smaller screens */
+      height: 300px; 
+    }
+
+    .margin-div{
+        margin-top: 25px;
+        margin-left: 30px;
+    }
+
+    .font-big{
+        font-size: 22px;
+    }
+
+    .hollow-text {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Shadow to simulate the outline */
+      }
+
+    .get-started{
+      padding: 8px 20px;
+      border-radius: 30px;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+      font-size: 8px;
+      border: none;
+      margin: 6px 0px;
+    }
+
+    
+  }

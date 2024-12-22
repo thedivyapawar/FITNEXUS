@@ -1,0 +1,23 @@
+.font-about{
+    font-size: 70px;
+}
+
+.about-img{
+    transition: 0.5s ease-in-out;
+}
+
+.about-img:hover{
+    transform: scale(0.90);
+}
+
+@media (max-width: 1000px) {
+    .font-about{
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .font-about{
+        font-size: 40px;
+    }
+}

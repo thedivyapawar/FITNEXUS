@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif ;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+:root {
+  --bs-gutter-x: 0; /* Horizontal gutter */
+  --bs-gutter-y: 0; /* Vertical gutter */
+}
+
+.subtext{
+    font-size: 18px;
+   color: grey;
+   text-spacing: 1px;
+}
+
+.nav-list:hover{
+  color:#8f9af6;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(150,157,225)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+  
+.navbar-toggler {
+    border-color: #8f9af6 !important;
+} 
+
+.shimmer{
+  height: 200px;
+  background-color: #d8b5ed ;
+  transition :0.8s ease-in-out
+}
+
+.shimmer-box{
+  background-color:#d8b5ed; 
+  transition :0.8s ease-in-out;
+  cursor : pointer; 
+}
+
+.shimmer-box:hover, .shimmer:hover{
+  transform: scale(0.90);
+}
+
+.shimmer-box2{
+  transition:0.8s ease-in-out;
+}
+
+.shimmer-box2:hover{
+  transform: scale(0.90);
+}
+
+
+@media (max-width: 1000px) {
+    .subtext{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .subtext{
+        font-size: 13px;
+    }
+}
