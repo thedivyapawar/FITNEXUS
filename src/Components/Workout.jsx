@@ -13,6 +13,7 @@ import upperArms from '../assets/Images/upper-arm.png'
 import lowerLegs from '../assets/Images/lower-leg.png'
 import upperLegs from '../assets/Images/upper-leg.png'
 import { useNavigate } from "react-router-dom";
+import useFetchData from "../Hooks/fetchData";
 
 function Workout() {
 
@@ -38,9 +39,11 @@ function Workout() {
     },[])
 
     async function getData(){
-    const response =  await fetch('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseObj )
-     const result = await response.json();
-     setBodyPart(result);
+    // const response =  await fetch('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseObj )
+    //  const result = await response.json();
+     const data = await useFetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList')
+    //  setBodyPart(result);
+     setBodyPart(data);
      setLoader(false);
     }
 

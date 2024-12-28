@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import Shimmer from "./Shimmer";
 import { exerciseObj } from "../Utils/RapidApiConfig";
 import { useEffect, useState } from "react";
+import useFetchData from "../Hooks/fetchData";
 
 function BodyPartExercises(){
 
@@ -16,9 +17,11 @@ function BodyPartExercises(){
     },[])
 
     async function fetchData(){
-       const response = await fetch(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodypart}`, exerciseObj )
-       const result = await response.json()
-       setData(result)
+    //    const response = await fetch(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodypart}`, exerciseObj )
+    //    const result = await response.json()
+
+       const data = await useFetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodypart}`)
+       setData(data)
        setLoader(false)
     }
 

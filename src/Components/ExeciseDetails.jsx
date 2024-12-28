@@ -4,6 +4,7 @@ import Shimmer from "./Shimmer"
 import { useParams } from "react-router-dom"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import useFetchData from "../Hooks/fetchData"
 
 function ExerciseDetails(){
 
@@ -17,10 +18,10 @@ function ExerciseDetails(){
     },[])
 
     async function fetchData(){
-       const response = await fetch(`https://exercisedb.p.rapidapi.com/exercises/exercise/${id}`, exerciseObj);
-       const result = await response.json()
-       
-       setData(result)
+    //    const response = await fetch(`https://exercisedb.p.rapidapi.com/exercises/exercise/${id}`, exerciseObj);
+    //    const result = await response.json()
+       const data = await useFetchData(`https://exercisedb.p.rapidapi.com/exercises/exercise/${id}`)
+       setData(data)
        setLoader(false)
     }
 
